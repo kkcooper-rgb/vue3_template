@@ -1,0 +1,83 @@
+{
+  "name": "jc-admin",
+  "version": "1.0.0",
+  "description": "a vue3 admin project",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^6.0.1",
+    "@logicflow/core": "^0.6.0",
+    "@logicflow/extension": "^0.6.0",
+    "ant-design-vue": "^3.2.20",
+    "axios": "^0.21.1",
+    "core-js": "^3.6.5",
+    "echarts": "^5.1.2",
+    "husky": "^7.0.0",
+    "js-cookie": "^2.2.1",
+    "lint-staged": "^11.0.0",
+    "lodash": "^4.17.21",
+    "normalize.css": "^8.0.1",
+    "nprogress": "^0.2.0",
+    "path-to-regexp": "^6.2.0",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.8",
+    "vue-simple-password-meter": "^1.0.3",
+    "vuex": "^4.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.1.4",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.0.0",
+    "husky": "^7.0.0",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "lint-staged": "^11.0.0",
+    "mockjs": "^1.1.0",
+    "path-to-regexp": "^6.2.0",
+    "style-resources-loader": "^1.4.1",
+    "vue-cli-plugin-style-resources-loader": "^0.1.5",
+    "vue-loader-v16": "^16.0.0-beta.5.4",
+    "webpack": "^4.46.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "license": "MIT"
+}
